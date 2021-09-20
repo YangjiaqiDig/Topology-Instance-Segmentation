@@ -1,0 +1,17 @@
+.vscode
+*__pycache__
+
+# directories
+cache/
+dataset/
+exp_output/
+pretrained/
+*Images/
+checkpoints/
+
+# checkpoint paths
+*.npz
+*.png
+*.log
+
+__*.py
