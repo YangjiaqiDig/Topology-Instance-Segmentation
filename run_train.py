@@ -211,7 +211,7 @@ class TrainManager(Config):
                 net_state_dict = convert_pytorch_checkpoint(net_state_dict)
                 load_feedback = net_desc.load_state_dict(net_state_dict, strict=False)
                 # * uncomment for your convenience
-                print("Missing Variables: \n", load_feedback[0])
+                print("Missing Variables(nbr): \n", len(load_feedback[0]))
                 print("Detected Unknown Variables: \n", load_feedback[1])
 
             # * extremely slow to pass this on DGX with 1 GPU, why (?)

@@ -114,10 +114,11 @@ def get_config(nr_type, mode):
                     ],
                     Events.EPOCH_COMPLETED: [
                         TrackLr(),
-                        PeriodicSaver(),
+                        # PeriodicSaver(),
                         VisualizeOutput(viz_step_output),
                         LoggingEpochOutput(),
                         TriggerEngine("valid"),
+                        ConditionalSaver("valid-np_dice"),
                         ScheduleLr(),
                     ],
                 },
@@ -135,7 +136,6 @@ def get_config(nr_type, mode):
                         ProcessAccumulatedRawOutput(
                             lambda a: proc_valid_step_output(a, nr_types=nr_type)
                         ),
-                        # ConditionalSaver("valid-np_dice"),
                         LoggingEpochOutput(),
                     ],
                 },

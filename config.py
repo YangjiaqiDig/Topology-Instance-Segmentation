@@ -45,14 +45,14 @@ class Config(object):
                 raise Exception("If using `fast` mode, input shape must be [256,256] and output shape must be [164,164]")
 
         self.dataset_name = "consep" # extracts dataset info from dataset.py
-        self.log_dir = "checkpoints/reproduce_540x540_80x80/" # where checkpoints will be saved
+        self.log_dir = "checkpoints/testing/" # where checkpoints will be saved
 
         # paths to training and validation patches
         self.train_dir_list = [
-            "dataset/training_data/consep/consep/train/540x540_80x80"
+            "dataset/training_data/consep/consep/train_test/"
         ]
         self.valid_dir_list = [
-            "dataset/training_data/consep/consep/valid/540x540_80x80"
+            "dataset/training_data/consep/consep/valid_test/"
         ]
 
         self.shape_info = {
