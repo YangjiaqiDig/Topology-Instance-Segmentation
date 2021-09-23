@@ -327,6 +327,8 @@ def proc_valid_step_output(raw_data, nr_types=None):
     over_inter = 0
     over_total = 0
     over_correct = 0
+    # acc_per_np = []
+    # dice_per_np = []
     prob_np = raw_data["prob_np"]
     true_np = raw_data["true_np"]
     for idx in range(len(raw_data["true_np"])):
@@ -338,11 +340,20 @@ def proc_valid_step_output(raw_data, nr_types=None):
         over_inter += inter
         over_total += total
         over_correct += correct
+        # acc_per_np.append(correct / np.size(true_np[0]))
+        # dice_per_np.append(2 * inter / (total + 1.0e-8))
+
     nr_pixels = len(true_np) * np.size(true_np[0])
     acc_np = over_correct / nr_pixels
     dice_np = 2 * over_inter / (over_total + 1.0e-8)
     track_value("np_acc", acc_np, "scalar")
     track_value("np_dice", dice_np, "scalar")
+    # acc_td = sum((x-acc_np)**2 for x in acc_per_np) / len(acc_per_np)
+    # acc_std = acc_td**0.5
+    # dice_td = sum((x-dice_np)**2 for x in dice_per_np) / len(dice_per_np)
+    # dice_std = dice_td**0.5
+    # track_value("np_acc_std", acc_std, "scalar")
+    # track_value("np_dice_std", dice_std, "scalar")
 
     # * TP statistic
     if nr_types is not None:

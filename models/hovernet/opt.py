@@ -80,7 +80,7 @@ def get_config(nr_type, mode):
                         "lr_scheduler": lambda x: optim.lr_scheduler.StepLR(x, 25),
                         "extra_info": {
                             "loss": {
-                                "np": {"bce": 1, "dice": 1},
+                                "np": {"bce": 1, "dice": 1, "topo": 0.5},
                                 "hv": {"mse": 1, "msge": 1},
                                 "tp": {"bce": 1, "dice": 1},
                             },
@@ -92,7 +92,7 @@ def get_config(nr_type, mode):
                 },
                 "target_info": {"gen": (gen_targets, {}), "viz": (prep_sample, {})},
                 "batch_size": {"train": 4, "valid": 8,}, # batch size per gpu
-                "nr_epochs": 100,
+                "nr_epochs": 50,
             },
         ],
         # ------------------------------------------------------------------
