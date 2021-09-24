@@ -4,7 +4,7 @@ python run_infer.py \
 --type_info_path=type_info.json \
 --batch_size=8 \
 --model_mode=original \
---model_path=checkpoints/reproduce_msge2/01/net_epoch=118.tar \
+--model_path=checkpoints/reproduce/net_best=[valid-np_dice].tar \
 --nr_inference_workers=8 \
 --nr_post_proc_workers=16 \
 tile \

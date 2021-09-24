@@ -223,10 +223,12 @@ def run_nuclei_inst_stat(pred_dir, true_dir, print_img_stats=False, ext=".mat"):
     ####
     metrics = np.array(metrics)
     metrics_avg = np.mean(metrics, axis=-1)
+    metrics_std = np.std(metrics, axis=-1)
     np.set_printoptions(formatter={"float": "{: 0.5f}".format})
     titles = ['Dice', 'AJI_fast', 'DQ', 'SQ', 'PQ','AJI']
     print(titles)
     print(metrics_avg)
+    print(metrics_std)
     metrics_avg = list(metrics_avg)
     return metrics
 

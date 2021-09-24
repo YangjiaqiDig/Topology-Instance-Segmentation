@@ -6,7 +6,7 @@ Segmentation results on CoNSeP dataset:
 
 
 Simultaneous Segmentation and Classification results on CoNSeP dataset: 
-| Method            | ACC      | DICE     | DICE<sub>e</sub> | DICE<sub>i</sub> | DICE<sub>s</sub> | DICE<sub>m</sub> | F1<sub>d</sub> | F1<sub>e</sub> | F1<sub>i</sub> | F1<sub>s</sub> | F1<sub>m</sub> |
-| ------------------|----------|----------|------------------| -----------------|------------------|------------------|----------------|----------------|----------------|----------------|----------------|
-| HoverNet Repoduce | 0.748    |          | 0.635            | 0.631            | 0.566            | 0.426            |                |                |                |                |                |   
-| ReseNet+topo05    | 0.756    |          | 0.636            | 0.559            | 0.557            | 0.348            |                |                |                |                |                |
+| Method            | ACC      | DICE     | AJI_fast | AJI   | DQ    | SQ    | PQ    | F1<sub>d</sub> | F1<sub>e</sub> | F1<sub>i</sub> | F1<sub>s</sub> | F1<sub>m</sub> |
+| ------------------|----------|----------|----------|-------| ------|-------|-------|----------------|----------------|----------------|----------------|----------------|
+| HoverNet Repoduce | 0.942    | 0.848    | 0.552    | 0.583 | 0.680 | 0.774 | 0.527 | 0.835          | 0.694          | 0.695          | 0.537          |                |                  
+| ReseNet+topo05    | 0.756    |          | 0.636    |       | 0.559 |       |       | 0.557          | 0.348          |                |                |                |           
