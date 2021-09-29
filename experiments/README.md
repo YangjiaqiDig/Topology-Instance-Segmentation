@@ -16,3 +16,5 @@ Segmentation results on Kumar dataset (valid-np_dice as select standard):
 | Method            | ACC      | DICE     | AJI_fast | AJI     | DQ      | SQ     | PQ     |
 | ------------------|----------|----------|----------|---------| --------|--------|--------|
 | hoverNet          | 0.       | 0.8211   | 0.6108   | 0.6321  | 0.7632  | 0.7714 | 0.5904 |
+| hover_topo05      |          | 0.8199   | 0.6046   | 0.6261  | 0.7537  | 0.7687 | 0.5815 |
+| hover_topo1_noBce |          | 0.8114   | 0.5930   | 0.6143  | 0.7444  | 0.7570 | 0.5653 |
