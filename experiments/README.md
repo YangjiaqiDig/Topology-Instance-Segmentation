@@ -9,7 +9,7 @@ Simultaneous Segmentation and Classification results on CoNSeP dataset (valid-np
 | RN+topo1[2stage]  | 0.938    | 0.827    | 0.549    | 0.581 | 0.674 | 0.766 | 0.517 | 0.749          | 0.630          | 0.524          | 0.543          | 0.322          | 
 | RN+topo05[2stage] | 0.940    | 0.844    | 0.549    | 0.579 | 0.678 | 0.766 | 0.520 | 0.746          | 0.613          | 0.558          | 0.544          | 0.295          |  
 | RP+topo05         | 0.941    | 0.848    | 0.554    | 0.585 | 0.685 | 0.770 | 0.528 | 0.748          | 0.644          | 0.556          | 0.544          | 0.315          |
-
+| RP+topo05+noTpD   | 0.941    | 0.846    | 0.559    | 0.587 | 0.687 | 0.771 | 0.531 | 0.747          | 0.638          | 0.561          | 0.543          | 0.440          |
 
 
 Segmentation results on Kumar dataset (valid-np_dice as select standard): 
